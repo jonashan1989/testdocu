@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'helllllllllo',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -34,6 +34,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'docs',
+          routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -57,7 +59,18 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
+      },
+      algolia: {
+        apiKey: 'b17e781290606165c98daf8535fd0602',
+        indexName: 'testdocu',
+        appId: '9YI24KT2SS',
+        contextualSearch: false,
+      },
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'My Site',
